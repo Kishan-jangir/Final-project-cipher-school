@@ -1,0 +1,256 @@
+body{
+  font-family: "Montserrat",sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-image: url('images/back5.jpg');
+  opacity: 0.1;
+  background-repeat: no-repeat;
+  background-size: 1600px auto; */
+}
+
+table{
+  font-family: "Montserrat";
+}
+
+/* Navigation section */
+
+nav a:hover{
+  color:#204051;
+}
+
+.navbar{
+  background: linear-gradient(to right, #66ffff 0%, #6699ff 79%);
+  padding: 3% 2%;
+}
+
+.Brand-box{
+  padding: 0.2% 0.2%;
+}
+
+.navbar img{
+  height: 5rem;
+  width: 4rem;
+  padding-bottom: 25px;
+  padding-right: 10px;
+}
+
+.navbar-brand{
+  color:#204051;
+  font-weight: bold;
+  font-size: 2.7rem;
+  font-weight:lighter;
+  font-family:'Oxygen';
+  padding: 10px 0px;
+}
+
+.navbar-brand span{
+  font-family: "Pacifico";
+}
+
+.nav-item{
+  font-size: 1.2rem;
+  font-family:'Montserrat';
+  font-weight: bolder;
+  padding:0 15px;
+}
+
+.nav-link{
+  color: white;
+}
+
+.nav-item :hover{
+  border-radius: 30px;
+  font-size: 1.43rem;
+  transition: 0.3s;
+}
+
+/* search Section/First Section */
+
+#first-sec{
+  padding-top: 50px; 
+}
+
+#float-cloud{
+  padding-left: 0px;
+  padding-top:50px;
+  height: 600px;
+  width: 700px;
+}
+
+.search-sec-head{
+  font-family: "Montserrat";
+  font-size: 2rem;
+  color: black;
+  opacity: 0.4;
+  padding-top: 100px;
+  padding-left:130px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.search-sec-sub{
+  color: #3f72af;
+  font-family: "Montserrat";
+  padding-left: 130px;
+  padding-top: 30px;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+.highlight{
+color:#0a55ad;
+font-weight: bold;
+font-size: 1.25rem;
+}
+
+#first-sec .row .col-lg-6{
+  padding-left: 10px;
+}
+
+/* Weather Template section */
+
+#weather-template{
+  font-family: "Montserrat";
+  color: #8785a2;
+  background: #eeeeee;
+  background: linear-gradient(#74f9ff 0%, #6699ff 79%);
+}
+
+
+/* Search Bar & Button */
+
+.input-group{
+  padding: 35px 170px 0 120px;
+}
+
+#myInput{
+  border-radius: 5px;
+}
+
+#myBtn{
+  border-radius: 5px;
+}
+
+.city_detail h1,h4,h5{
+  color: #2a363b;
+}
+
+.city_detail h1{
+  font-size: 3.4rem;
+}
+
+.city_detail{
+  padding-left: 150px;
+  padding-top: 110px;
+}
+#current-city-weather{
+  padding: 250px 100px 0;;
+}
+
+#current-city-weather h6{
+  padding-top: 7px;
+  font-size: 1.25rem;
+  color: #2a363b;
+  text-align: center;
+}
+
+/* image center */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* weather card section */
+
+.weather-card-section .card-body{
+  background: #303a52;
+  background: #d6e4f0;
+  border-radius: 35px;
+}
+
+.weather-card-section .col-lg-2{
+  margin: 0;
+  padding: 0 10px;
+}
+
+.weather-card-section{
+  padding-top: 100px;
+  padding-right: 140px;
+  padding-bottom: 70px;
+}
+
+/* Small icons of card */
+.weather-attr-icon{
+  padding: 5px 0;
+  height:50px;
+  width: 50px;
+}
+
+/* Display Inline block */
+.ib{
+  display: inline-block;
+}
+
+#sunset, #sunrise, #humidity, #temperature{
+  filter:grayscale(100%);
+  height: 130px;
+  width: 130px;
+}
+
+.card-box{
+  padding-top: 140px;
+  padding-left: 50px;
+
+}
+
+.cw-state-name{
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-size: 1rem;
+}
+
+.card-title{
+  font-size: 1.2rem;
+}
+
+.card-date{
+  text-align: center;
+}
+
+.cw-detail{
+  text-align: center;
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+
+.card_weather_icon{
+  padding-left: 20px;
+  height: 150px;
+}
+
+/* Footer section */
+
+#footer{
+  background-color: #ffffff;
+  padding: 6% 14%;
+}
+#footer div{
+
+}
+.footer-icons{
+  padding:0 46%;
+}
+
+.footer-para{
+  color: grey;
+}
+
+.social-icon{
+  margin:20px 10px;
+}
+
+.social-icon-box{
+  padding-left: 60px;
+}

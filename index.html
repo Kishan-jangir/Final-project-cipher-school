@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="images/brand.png">
+
+  <!-- Bootstrap cdn -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Oxygen:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,700&display=swap" rel="stylesheet">
+
+  <title>MetroWeather</title>
+</head>
+<body >
+
+  <!-- Navbar -->
+  <nav id="navbox">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="padding:5px 100px 0 100px;">
+      <div class="Brand-box">
+        <a style="color: #8785a2; font-size:3rem;" class="navbar-brand" href="#" style="font-size: 2rem;"><img src="images/brand.png" alt="Website-icon">
+          <span>M</span>etro<span>W</span>eather</a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#weather-template">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Api</a></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#footer">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </nav>
+
+  <!-- First Section -->
+  <section id="first-sec">
+    <div class="row">
+      <div class="col-lg-6 container-fluid">
+        <h3 class="search-sec-head">Climate is what we expect, <br>weather is what we get.</h3>
+        <h4 class="search-sec-sub">From <span class="highlight">weather updates</span> to today’s temperature, get the <span class="highlight">accurate weather forecast</span> you know you can rely on with MetroWeather.</h4>
+
+        <div class="input-group">
+          <input onfocus = 'this.value = ""' type="text" class="form-control" id="myInput" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-primary" id="myBtn" type="button" id="button-addon2">Search</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-6 container-fluid">
+        <img class="img-fluid img-responsive" id="float-cloud" src="images/floatcloud.gif" alt="">
+        <div class="container-fluid search-background" id="search-section">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weather Template -->
+  <section id="weather-template">
+    <div class="row ">
+      <div class="col-lg-3">
+        <div class="city_detail">
+          <h1 id="title"></h1>
+          <h4 id="title-date"></h4>
+          <h5 id="title-time"></h5>
+        </div>
+      </div>
+
+      <div class="col-lg-9">
+        <div class="row" id="current-city-weather">
+          <div class="col-lg-3">
+            <img class="center" id="sunrise" src="images/sunrise.svg" alt="">
+            <h6 class="" id="cwSunrise"></h6>
+          </div>
+          <div class="col-lg-3">
+            <img class="center" id="sunset" src="images/sunset.svg" alt="">
+            <h6 class="" id="cwSunset"></h6>
+          </div>
+          <div class="col-lg-3">
+            <img class="center" id="temperature" src="images/temperature.svg" alt="">
+            <h6 class="" id="cwTemperature"></h6>
+          </div>
+          <div class="col-lg-3">
+            <img class="center" id="humidity" src="images/humidity.svg" alt="">
+            <h6 class="" id="cwHumidity-1"></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Weather Card section -->
+    <div class="row weather-card-section">
+      <div class="col-lg-2">
+
+      </div>
+      <div class="col-lg-2">
+        <div class="card-body">
+          <h3 class="card-title card-date" id="cwDate-1"></h3>
+          <img class="card_weather_icon" id="cw-image-1" src="" alt="No image loaded">
+          <h6 class="cw-detail cw-state-name" id="cwWeatherStateName-1"></h6>
+
+          <div class="container-fluid weather-icon-box">
+            <img class="weather-attr-icon ib" src="images/windspeed2.svg" alt="">
+            <h6 class="cw-detail ib" id="cwWindSpeed-1"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/maxtemp.svg" alt="">
+            <h6 class="cw-detail ib" id="cwMaxTemp-1"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/mintemp.svg" alt="">
+            <h6 class="cw-detail ib" id="cwMinTemp-1"></h6>
+          </div>
+
+          <div class="container-fluid weather-icon-box">
+            <img class="weather-attr-icon ib" src="images/winddirection.gif" alt="">
+            <h6 class="cw-detail ib" id="cwWindDirection-1"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/airpressure.svg" alt="">
+            <h6 class="cw-detail ib" id="cwAirPressure-1"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/humidity.svg" alt="">
+            <h6 class="cw-detail ib" id="cwHumidity-0"></h6>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card-body">
+          <h3 class="card-title card-date" id="cwDate-2"></h3>
+          <img class="card_weather_icon" id="cw-image-2" src="" alt="No image loaded">
+          <h6 class="cw-detail cw-state-name" id="cwWeatherStateName-2"></h6>
+
+          <div class="container-fluid weather-icon-box">
+            <img class="weather-attr-icon ib" src="images/windspeed2.svg" alt="">
+            <h6 class="cw-detail ib" id="cwWindSpeed-2"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/maxtemp.svg" alt="">
+            <h6 class="cw-detail ib" id="cwMaxTemp-2"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/mintemp.svg" alt="">
+            <h6 class="cw-detail ib" id="cwMinTemp-2"></h6>
+          </div>
+
+          <div class="container-fluid weather-icon-box">
+            <img class="weather-attr-icon ib" src="images/winddirection.gif" alt="">
+            <h6 class="cw-detail ib" id="cwWindDirection-2"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/airpressure.svg" alt="">
+            <h6 class="cw-detail ib" id="cwAirPressure-2"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/humidity.svg" alt="">
+            <h6 class="cw-detail ib" id="cwHumidity-2"></h6>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card-body">
+          <h3 class="card-title card-date" id="cwDate-3"></h3>
+          <img class="card_weather_icon" id="cw-image-3" src="" alt="No image loaded">
+          <h6 class="cw-detail cw-state-name" id="cwWeatherStateName-3"></h6>
+
+          <div class="container-fluid weather-icon-box">
+            <img class="weather-attr-icon ib" src="images/windspeed2.svg" alt="">
+            <h6 class="cw-detail ib" id="cwWindSpeed-3"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/maxtemp.svg" alt="">
+            <h6 class="cw-detail ib" id="cwMaxTemp-3"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/mintemp.svg" alt="">
+            <h6 class="cw-detail ib" id="cwMinTemp-3"></h6>
+          </div>
+
+          <div class="container-fluid weather-icon-box">
+            <img class="weather-attr-icon ib" src="images/winddirection.gif" alt="">
+            <h6 class="cw-detail ib" id="cwWindDirection-3"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/airpressure.svg" alt="">
+            <h6 class="cw-detail ib" id="cwAirPressure-3"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/humidity.svg" alt="">
+            <h6 class="cw-detail ib" id="cwHumidity-3"></h6>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card-body">
+          <h3 class="card-title card-date" id="cwDate-4"></h3>
+          <img class="card_weather_icon" id="cw-image-4" src="" alt="No image loaded">
+          <h6 class="cw-detail cw-state-name" id="cwWeatherStateName-4"></h6>
+
+          <div class="container-fluid weather-icon-box">
+            <img class="weather-attr-icon ib" src="images/windspeed2.svg" alt="">
+            <h6 class="cw-detail ib" id="cwWindSpeed-4"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/maxtemp.svg" alt="">
+            <h6 class="cw-detail ib" id="cwMaxTemp-4"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/mintemp.svg" alt="">
+            <h6 class="cw-detail ib" id="cwMinTemp-4"></h6>
+          </div>
+
+          <div class="container-fluid weather-icon-box">
+            <img class="weather-attr-icon ib" src="images/winddirection.gif" alt="">
+            <h6 class="cw-detail ib" id="cwWindDirection-4"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/airpressure.svg" alt="">
+            <h6 class="cw-detail ib" id="cwAirPressure-4"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/humidity.svg" alt="">
+            <h6 class="cw-detail ib" id="cwHumidity-4"></h6>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="card-body">
+          <h3 class="card-title card-date" id="cwDate-5"></h3>
+          <img class="card_weather_icon" id="cw-image-5" src="" alt="No image loaded">
+          <h6 class="cw-detail cw-state-name" id="cwWeatherStateName-5"></h6>
+
+          <div class="container-fluid weather-icon-box">
+            <img class="weather-attr-icon ib" src="images/windspeed2.svg" alt="">
+            <h6 class="cw-detail ib" id="cwWindSpeed-5"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/maxtemp.svg" alt="">
+            <h6 class="cw-detail ib" id="cwMaxTemp-5"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/mintemp.svg" alt="">
+            <h6 class="cw-detail ib" id="cwMinTemp-5"></h6>
+          </div>
+
+          <div class="container-fluid weather-icon-box">
+            <img class="weather-attr-icon ib" src="images/winddirection.gif" alt="">
+            <h6 class="cw-detail ib" id="cwWindDirection-5"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/airpressure.svg" alt="">
+            <h6 class="cw-detail ib" id="cwAirPressure-5"></h6>
+          </div>
+
+          <div class="container-fluid">
+            <img class="weather-attr-icon ib" src="images/humidity.svg" alt="">
+            <h6 class="cw-detail ib" id="cwHumidity-5"></h6>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table_1 -->
+
+  <!-- <div class="table-responsive">
+    <table class="table table-dark table-hover">
+      <thead id="table_1_head"></thead>
+      <tbody id="table_1"></tbody>
+    </table>
+  </div> -->
+
+  <!-- Table_2 -->
+
+    <!-- <div class="table-responsive">
+      <table class="table table-dark table-hover">
+        <thead id="table_2_head">
+        </thead>
+        <tbody id="table_2">
+
+        </tbody>
+      </table>
+    </div> -->
+
+  <footer id="footer">
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4">
+        <div class="social-icon-box">
+          <i class="fab fa-twitter footer-i1 social-icon"></i>
+          <i class="fab fa-facebook-f footer-i2 social-icon"></i>
+          <i class="fab fa-instagram footer-i3 social-icon"></i>
+          <i class="fas fa-envelope footer-i4 social-icon"></i>
+        </div>
+        <p class="footer-para">© Copyright 2020 MetroWeather.Inc</p>
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+
+
+    <script type='text/javascript' src='js/weather.js'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</body>
+
+</html>
